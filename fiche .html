@@ -1,0 +1,140 @@
+!DOCTYPE html
+html lang=fr
+head
+meta charset=UTF-8
+titleFiche pédagogique – L’adjectif qualificatiftitle
+
+style
+body {
+    font-family Arial, sans-serif;
+    margin 30px;
+    line-height 1.6;
+}
+h1, h2 {
+    text-align center;
+    color #1f4e79;
+}
+.section {
+    margin-bottom 25px;
+}
+.box {
+    border 2px solid #1f4e79;
+    border-radius 10px;
+    padding 15px;
+    background #f4f9ff;
+}
+button {
+    padding 8px 15px;
+    margin-top 10px;
+    cursor pointer;
+}
+.correct {
+    color green;
+    font-weight bold;
+}
+.incorrect {
+    color red;
+    font-weight bold;
+}
+.arabe {
+    color #006400;
+    font-weight bold;
+}
+style
+head
+
+body
+
+h1FICHE PÉDAGOGIQUE – GRAMMAIREh1
+h2L’adjectif qualificatifh2
+
+div class=section box
+pstrongNiveau strong 5ᵉ année primairep
+pstrongDurée strong 1 heurep
+pstrongEffectif strong 36 élèvesp
+pstrongDiscipline strong Françaisp
+div
+
+!-- OBJECTIFS --
+div class=section box
+h3🎯 Objectifs d’apprentissageh3
+ul
+liIdentifier l’adjectif qualificatifli
+liComprendre son rôleli
+liL’accorder en genre et en nombreli
+ul
+div
+
+!-- DEFINITION --
+div class=section box
+h3📘 Définitionh3
+pL’adjectif qualificatif décrit le nom.p
+pstrongExemple strong une maison ugrandeup
+p class=arabeالصفة تصف الاسمp
+div
+
+!-- ACTIVITÉ INTERACTIVE --
+div class=section box
+h3✏️ Activité 1  Choisis la bonne réponseh3
+
+pL’adjectif qualificatif p
+input type=radio name=q1 value=0 remplace le nombr
+input type=radio name=q1 value=1 décrit le nombr
+input type=radio name=q1 value=0 conjugue le verbebr
+
+button onclick=verifierQCM()Vérifierbutton
+p id=resultQCMp
+div
+
+!-- TEXTE A TROUS --
+div class=section box
+h3✏️ Activité 2  Complèteh3
+
+pUne robe input type=text id=rep1.p
+button onclick=verifierTrou()Vérifierbutton
+p id=resultTroup
+div
+
+!-- TRACE ECRITE --
+div class=section box
+h3📝 Trace écriteh3
+pL’adjectif qualificatif p
+ul
+lidécrit le nomli
+lis’accorde avec lui en genre et en nombreli
+ul
+pstrongExemples strongp
+pun chat noir  une chatte noirep
+div
+
+script
+function verifierQCM() {
+    let rep = document.querySelector('input[name=q1]checked');
+    if (!rep) {
+        document.getElementById(resultQCM).innerHTML =
+        span class='incorrect'Choisis une réponse.span;
+        return;
+    }
+    if (rep.value == 1) {
+        document.getElementById(resultQCM).innerHTML =
+        span class='correct'Bonne réponse ✔span;
+    } else {
+        document.getElementById(resultQCM).innerHTML =
+        span class='incorrect'Faux ✖span;
+    }
+}
+
+function verifierTrou() {
+    let rep = document.getElementById(rep1).value.toLowerCase();
+    if (rep === bleue  rep === belle  rep === rouge) {
+        document.getElementById(resultTrou).innerHTML =
+        span class='correct'Correct ✔span;
+    } else {
+        document.getElementById(resultTrou).innerHTML =
+        span class='incorrect'Essaie encore ✖span;
+    }
+}
+script
+
+body
+html
